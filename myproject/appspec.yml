@@ -1,0 +1,14 @@
+
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/myproject
+hooks:
+  BeforeInstall: 
+    - location: depend.sh
+      timeout: 300
+  AfterInstall:
+    - location: config.sh
+      timeout: 300
+ 
